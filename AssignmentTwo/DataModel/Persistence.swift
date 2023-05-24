@@ -31,3 +31,7 @@ func saveData() {
         print("Error saving: \(error)")
     }
 }
+
+func deleteData(at offset: IndexSet) {
+    
+}
