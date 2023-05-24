@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(entity: /object type here/,sortDescriptors: [], animation: .default)
+    var // object to be operated on: FetchedResults<object type here>
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+
         }
         .padding()
     }

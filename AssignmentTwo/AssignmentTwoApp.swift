@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct AssignmentTwoApp: App {
+    
+    var model = PersistenceHandler.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(\.managedObjectContext, model.container.viewContext)
         }
     }
 }

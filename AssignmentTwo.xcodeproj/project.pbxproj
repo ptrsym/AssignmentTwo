@@ -100,12 +100,12 @@
 		D0BFAB632A1D9D2600D4D47B /* AssignmentTwo */ = {
 			isa = PBXGroup;
 			children = (
-				D0BFAB912A1D9E2200D4D47B /* Persistence.swift */,
 				D0BFAB9A2A1DA54E00D4D47B /* readme.md */,
-				D0BFAB8E2A1D9DF300D4D47B /* Model.xcdatamodeld */,
 				D0BFAB642A1D9D2600D4D47B /* AssignmentTwoApp.swift */,
 				D0BFAB662A1D9D2600D4D47B /* ContentView.swift */,
 				D0BFAB682A1D9D2800D4D47B /* Assets.xcassets */,
+				D0BFAB8E2A1D9DF300D4D47B /* Model.xcdatamodeld */,
+				D0BFAB912A1D9E2200D4D47B /* Persistence.swift */,
 				D0BFAB6A2A1D9D2800D4D47B /* Preview Content */,
 			);
 			path = AssignmentTwo;
