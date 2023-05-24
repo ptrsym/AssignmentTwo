@@ -14,6 +14,9 @@
 		D0BFAB762A1D9D2800D4D47B /* AssignmentTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB752A1D9D2800D4D47B /* AssignmentTwoTests.swift */; };
 		D0BFAB802A1D9D2800D4D47B /* AssignmentTwoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB7F2A1D9D2800D4D47B /* AssignmentTwoUITests.swift */; };
 		D0BFAB822A1D9D2800D4D47B /* AssignmentTwoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB812A1D9D2800D4D47B /* AssignmentTwoUITestsLaunchTests.swift */; };
+		D0BFAB902A1D9DF300D4D47B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB8E2A1D9DF300D4D47B /* Model.xcdatamodeld */; };
+		D0BFAB922A1D9E2200D4D47B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB912A1D9E2200D4D47B /* Persistence.swift */; };
+		D0BFAB942A1D9F3000D4D47B /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = D0BFAB932A1D9F3000D4D47B /* ReadMe */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		D0BFAB7B2A1D9D2800D4D47B /* AssignmentTwoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentTwoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BFAB7F2A1D9D2800D4D47B /* AssignmentTwoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTwoUITests.swift; sourceTree = "<group>"; };
 		D0BFAB812A1D9D2800D4D47B /* AssignmentTwoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTwoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0BFAB8F2A1D9DF300D4D47B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D0BFAB912A1D9E2200D4D47B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D0BFAB932A1D9F3000D4D47B /* ReadMe */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		D0BFAB632A1D9D2600D4D47B /* AssignmentTwo */ = {
 			isa = PBXGroup;
 			children = (
+				D0BFAB932A1D9F3000D4D47B /* ReadMe */,
+				D0BFAB912A1D9E2200D4D47B /* Persistence.swift */,
+				D0BFAB8E2A1D9DF300D4D47B /* Model.xcdatamodeld */,
 				D0BFAB642A1D9D2600D4D47B /* AssignmentTwoApp.swift */,
 				D0BFAB662A1D9D2600D4D47B /* ContentView.swift */,
 				D0BFAB682A1D9D2800D4D47B /* Assets.xcassets */,
@@ -233,6 +242,7 @@
 			files = (
 				D0BFAB6C2A1D9D2800D4D47B /* Preview Assets.xcassets in Resources */,
 				D0BFAB692A1D9D2800D4D47B /* Assets.xcassets in Resources */,
+				D0BFAB942A1D9F3000D4D47B /* ReadMe in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BFAB672A1D9D2600D4D47B /* ContentView.swift in Sources */,
+				D0BFAB922A1D9E2200D4D47B /* Persistence.swift in Sources */,
 				D0BFAB652A1D9D2600D4D47B /* AssignmentTwoApp.swift in Sources */,
+				D0BFAB902A1D9DF300D4D47B /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +589,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0BFAB8E2A1D9DF300D4D47B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0BFAB8F2A1D9DF300D4D47B /* Model.xcdatamodel */,
+			);
+			currentVersion = D0BFAB8F2A1D9DF300D4D47B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0BFAB592A1D9D2600D4D47B /* Project object */;
 }
