@@ -10,14 +10,23 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var context
-    @FetchRequest(entity: /object type here/,sortDescriptors: [], animation: .default)
-    var // object to be operated on: FetchedResults<object type here>
+    @FetchRequest(entity: Place,sortDescriptors: [], animation: .default)
+    var favouritePlaces: FetchedResults<Place>
     
     var body: some View {
-        VStack {
-
+        NavigationView{
+            VStack {
+                List{
+                    ForEach(favouritePlaces) {
+                        place in
+                        PlaceRowView(place)
+                    }
+                   
+                }
+                
+            }
+            .padding()
         }
-        .padding()
     }
 }
 

@@ -20,6 +20,8 @@
 		D0BFAB9F2A1DBBFB00D4D47B /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB9E2A1DBBFB00D4D47B /* Global.swift */; };
 		D0BFABA02A1DBC0700D4D47B /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB9E2A1DBBFB00D4D47B /* Global.swift */; };
 		D0BFABAC2A1E96FB00D4D47B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFAB912A1D9E2200D4D47B /* Persistence.swift */; };
+		D0BFABAE2A1EA08B00D4D47B /* PlaceRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFABAD2A1EA08B00D4D47B /* PlaceRowView.swift */; };
+		D0BFABB02A1EA09E00D4D47B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFABAF2A1EA09E00D4D47B /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		D0BFAB912A1D9E2200D4D47B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D0BFAB9A2A1DA54E00D4D47B /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		D0BFAB9E2A1DBBFB00D4D47B /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		D0BFABAD2A1EA08B00D4D47B /* PlaceRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRowView.swift; sourceTree = "<group>"; };
+		D0BFABAF2A1EA09E00D4D47B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				D0BFAB662A1D9D2600D4D47B /* ContentView.swift */,
+				D0BFABAD2A1EA08B00D4D47B /* PlaceRowView.swift */,
+				D0BFABAF2A1EA09E00D4D47B /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BFAB672A1D9D2600D4D47B /* ContentView.swift in Sources */,
+				D0BFABAE2A1EA08B00D4D47B /* PlaceRowView.swift in Sources */,
 				D0BFAB922A1D9E2200D4D47B /* Persistence.swift in Sources */,
+				D0BFABB02A1EA09E00D4D47B /* DetailView.swift in Sources */,
 				D0BFAB652A1D9D2600D4D47B /* AssignmentTwoApp.swift in Sources */,
 				D0BFAB9F2A1DBBFB00D4D47B /* Global.swift in Sources */,
 				D0BFAB902A1D9DF300D4D47B /* Model.xcdatamodeld in Sources */,
