@@ -16,3 +16,12 @@ extension PlaceList {
         self.addToPlaces(newPlace)
     }
 }
+
+extension Place {
+    func addDetail(_ desc:String){
+        let context = PersistenceHandler.shared.container.viewContext
+        let newDetail = Detail(context: context)
+        newDetail.detail = desc
+        self.addToDetails(newDetail)
+    }
+}
