@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+import CoreData
+
 
 struct PlaceRowView: View {
+    
+    @Environment(\.managedObjectContext) var context
+    var place: Place(Context: context)
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            //Configure image thumbnail
+            Text(place.name ?? "no name")
+        }
+        
     }
 }
 

@@ -9,3 +9,10 @@ import Foundation
 import CoreData
 
 
+extension PlaceList {
+    func addPlace(){
+        let context = PersistenceHandler.shared.container.viewContext
+        let newPlace = Place(context: context)
+        self.addToPlaces(newPlace)
+    }
+}

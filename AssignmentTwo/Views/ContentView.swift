@@ -10,23 +10,28 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var context
-    @FetchRequest(entity: Place,sortDescriptors: [], animation: .default)
-    var favouritePlaces: FetchedResults<Place>
+    @FetchRequest(entity: PlaceList,sortDescriptors: [], animation: .default)
+    var favouritePlaces: FetchedResults<PlaceList>
     
     var body: some View {
         NavigationView{
             VStack {
                 List{
-                    ForEach(favouritePlaces) {
-                        place in
-                        PlaceRowView(place)
+                    ForEach(favouritePlaces[0].places) { place in
+                        NavigationLink(destination: DetailView(place)){
+                            PlaceRowView(place)
+                        }
                     }
                    
                 }
                 
             }
             .padding()
-        }
+        }.navigationTitle("Favourite Places")
+            .navigationBarItems(
+                leading: Button(action:{favouritePlaces[0].placelist.addPlace()}) {Text("New Place")}
+            ,
+                trailing: EditButton())
     }
 }
 

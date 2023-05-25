@@ -11,5 +11,9 @@
         <attribute name="longitude" optional="YES" attributeType="Double" minValueString="-180" maxValueString="180" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String" defaultValueString=""/>
         <relationship name="details" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Detail" inverseName="place" inverseEntity="Detail"/>
+        <relationship name="placelist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlaceList" inverseName="place" inverseEntity="PlaceList"/>
+    </entity>
+    <entity name="PlaceList" representedClassName="PlaceList" syncable="YES" codeGenerationType="class">
+        <relationship name="place" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Place" inverseName="placelist" inverseEntity="Place"/>
     </entity>
 </model>
