@@ -21,8 +21,11 @@ struct ContentView: View {
                         NavigationLink(destination: DetailView(place)){
                             PlaceRowView(place)
                         }
-                    }
+                    }.onDelete {indexSet in
+                        favouritePlaces[0].places.remove(atOffsets: indexSet)
+                        saveData()
                    
+                }
                 }
                 
             }

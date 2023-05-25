@@ -47,12 +47,15 @@ struct DetailView: View {
                     }
                     //provide a textfield when the user wants to add a detail
                     if isAddingDetail = true{
-                        TextField("Enter details", text: $newDetail)
+                        TextField("Enter location details", text: $newDetail)
                     }
                 }
                 List{
                     ForEach(place.details){ detail in
                         Text(detail.detail)
+                    }.onDelete {indexSet in
+                        place.details.remove(atOffsets: indexSet)
+                        saveData()
                     }
                 }
                 if isEditMode == .isActive{
@@ -73,7 +76,7 @@ struct DetailView: View {
                 
             }
         } .navigationBarTitle("\(place.name)")
-        .navigationBarItems(leading: EditButton())
+        .navigationBarItems(trailing: EditButton())
     }
 
 }

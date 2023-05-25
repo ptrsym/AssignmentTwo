@@ -10,7 +10,7 @@ import CoreData
 
 
 extension PlaceList {
-    func addPlace(){
+    private func addPlace(){
         let context = PersistenceHandler.shared.container.viewContext
         let newPlace = Place(context: context)
         self.addToPlaces(newPlace)
@@ -18,7 +18,7 @@ extension PlaceList {
 }
 
 extension Place {
-    func addDetail(_ desc:String){
+    private func addDetail(_ desc:String){
         let context = PersistenceHandler.shared.container.viewContext
         let newDetail = Detail(context: context)
         newDetail.detail = desc
