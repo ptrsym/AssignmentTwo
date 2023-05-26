@@ -13,6 +13,7 @@ built barebones content, placerow and detail view
 researched utilising managed context within extensions and functions
 built new place function
 investigated how entity relationships are retrieved from the context
+realised I would get a runtime error from intialising an empty collection on first launch so added a conditional to the add new place button
 
 ### Video 1
 

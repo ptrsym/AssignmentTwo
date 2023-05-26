@@ -32,6 +32,3 @@ func saveData() {
     }
 }
 
-func deleteData(at offset: IndexSet) {
-    
-}

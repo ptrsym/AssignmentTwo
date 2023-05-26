@@ -32,7 +32,16 @@ struct ContentView: View {
             .padding()
         }.navigationTitle("Favourite Places")
             .navigationBarItems(
-                leading: Button(action:{favouritePlaces[0].placelist.addPlace()}) {Text("New Place")}
+                leading: Button(action:{
+                    if favouritePlaces.isEmpty{
+                        var favouritePlaceList = PlaceList(context: context)
+                        favouritePlaces.append(favouritePlaceList)
+                        favouritePlaces[0].placelist.addPlace()
+                        saveData()
+                    }
+                    favouritePlaces[0].placelist.addPlace()
+                    saveData()
+                }) {Text("New Place")}
             ,
                 trailing: EditButton())
     }

@@ -15,6 +15,7 @@ struct AssignmentTwoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().environment(\.managedObjectContext, model.container.viewContext)
+                .environment(\.colorScheme, .dark)
         }
     }
 }
