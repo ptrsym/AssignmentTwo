@@ -17,7 +17,7 @@ struct PlaceRowView: View {
     var body: some View {
         HStack{
             //Configure image thumbnail
-            Text(place.name ?? "no name")
+            Text(place.strName)
         }
         
     }

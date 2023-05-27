@@ -14,10 +14,10 @@ struct PersistenceHandler {
     let container: NSPersistentContainer
     
     init (){
-        container = NSPersistentContainer(name: "Model")
-        container.loadPersistentStores {_, error in
-            if let err = error {
-                fatalError("Error to load with \(err)")
+        container = NSPersistentContainer(name: "Places")
+        container.loadPersistentStores { storeDescription, error in
+            if let error = error as NSError? {
+                fatalError("Error to load with \(error)")
             }
         }
     }

@@ -19,6 +19,7 @@ realised I would get a runtime error from intialising an empty collection on fir
 built extensions for coredata setters and getters for validation
 fixed detailview flow and implemented forms after some research, struggled with errors placing if/else statements within the form
 fixed minor errors in relation to entity relationship name changes
+project had broken coredata which wasnt being recognised despite everything being set correctly causing lots of unrecognised type and content errors. had to rebuild the file
 
 
 ### Video 1

@@ -78,8 +78,8 @@ struct DetailView: View {
                         Button(action: {
                             place.strName = name
                             place.strUrl = url
-                            place.longitude = longitude
-                            place.latitude = latitude
+                            place.setLongitude = longitude
+                            place.setLatitude = latitude
                             saveData()
                             
                             name = ""
