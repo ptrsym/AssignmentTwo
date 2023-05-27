@@ -15,6 +15,12 @@ built new place function
 investigated how entity relationships are retrieved from the context
 realised I would get a runtime error from intialising an empty collection on first launch so added a conditional to the add new place button
 
+27/05/23
+built extensions for coredata setters and getters for validation
+fixed detailview flow and implemented forms after some research, struggled with errors placing if/else statements within the form
+fixed minor errors in relation to entity relationship name changes
+
+
 ### Video 1
 
 ## Milestone 2

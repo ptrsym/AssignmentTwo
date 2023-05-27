@@ -20,7 +20,7 @@ extension Place {
     }
     var longitude:Double{
         get{
-            self.longitude ?? "0.0"
+            self.longitude ?? 0.0
         }
         set{
             if let newValue = Double(newValue), newValue >= -180.0, newValue <= 180.0 {
@@ -32,7 +32,7 @@ extension Place {
     }
     var latitude:Double{
         get{
-            self.latitude ?? "0.0"
+            self.latitude ?? 0.0
         }
         set {
             if let newValue = Double(newValue), newValue >= -90.0, newValue <= 90.0 {
@@ -42,10 +42,22 @@ extension Place {
             }
         }
     }
+    var strUrl: String {
+        get {
+            self.imgurl.absoluteString ?? "No Image set"
+        }
+        set {
+            if let url = URL(string: newValue) {
+                self.imgurl = url
+            } else {
+                print("Invalid URL link \(newValue)")
+            }
+        }
+    }
 }
     
 extension Detail {
-    var desc:String {
+    var detail:String {
         get {
             self.detail ?? "Add a description for your place"
         }
