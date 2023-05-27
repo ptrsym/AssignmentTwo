@@ -1,8 +1,8 @@
 //
-//  Global.swift
+//  ViewModel.swift
 //  AssignmentTwo
 //
-//  Created by Peter on 24/5/2023.
+//  Created by Peter on 27/5/2023.
 //
 
 import Foundation
@@ -25,3 +25,13 @@ extension Place {
         self.addToDetails(newDetail)
     }
 }
+
+func saveData() {
+    let context = PersistenceHandler.shared.container.viewContext
+    do {
+        try context.save()
+    }catch {
+        print("Error saving: \(error)")
+    }
+}
+

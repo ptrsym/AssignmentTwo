@@ -23,12 +23,3 @@ struct PersistenceHandler {
     }
 }
 
-func saveData() {
-    let context = PersistenceHandler.shared.container.viewContext
-    do {
-        try context.save()
-    }catch {
-        print("Error saving: \(error)")
-    }
-}
-
