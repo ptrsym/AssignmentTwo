@@ -11,7 +11,7 @@ import CoreData
 struct DetailView: View {
     @Environment(\.editMode) var isEditMode
     @Environment(\.managedObjectContext) var context
-    var place: Place(Context: context)
+    var place: Place
     @State var isAddingDetail = false
     @State var newDetail = ""
     @State var name = ""
@@ -40,7 +40,6 @@ struct DetailView: View {
                                 //Save the new detail based on user input
                                 Button(action: {
                                     place.addDetail(newDetail)
-                                    saveData()
                                     newDetail = ""
                                     isAddingDetail = false
                                 }) {
@@ -50,18 +49,15 @@ struct DetailView: View {
                         }
                         
                         Section(header: Text("Details")) {
-                            //provide a textfield when the user wants to add a detail
+//                          provide a textfield when the user wants to add a detail
                             if isAddingDetail {
                                 TextField("Enter a location detail", text: $newDetail)
-                            }
+                         }
                             ForEach(place.details) { detail in
                                 Text(detail.detail)
                                     .listRowInsets(EdgeInsets())
                             }
-                            .onDelete { indexSet in
-                                place.details.remove(atOffsets: indexSet)
-                                saveData()
-                            }
+                            .onDelete ()
                         }
                         
                         Section {
@@ -78,8 +74,8 @@ struct DetailView: View {
                         Button(action: {
                             place.strName = name
                             place.strUrl = url
-                            place.setLongitude = longitude
-                            place.setLatitude = latitude
+                            place.strLongitude = longitude
+                            place.strLatitude = latitude
                             saveData()
                             
                             name = ""
@@ -100,10 +96,7 @@ struct DetailView: View {
                                     Text(detail.detail)
                                         .listRowInsets(EdgeInsets())
                                 }
-                                .onDelete { indexSet in
-                                    place.details.remove(atOffsets: indexSet)
-                                    saveData()
-                                }
+                                .onDelete ()
                             }
                             
                             Section {
@@ -119,8 +112,8 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView(place: place)
+//    }
+//}

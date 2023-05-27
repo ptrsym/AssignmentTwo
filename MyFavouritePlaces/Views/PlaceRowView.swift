@@ -12,7 +12,7 @@ import CoreData
 struct PlaceRowView: View {
     
     @Environment(\.managedObjectContext) var context
-    var place: Place(Context: context)
+    var place: Place
     
     var body: some View {
         HStack{
@@ -23,8 +23,8 @@ struct PlaceRowView: View {
     }
 }
 
-struct PlaceRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlaceRowView()
-    }
-}
+//struct PlaceRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PlaceRowView()
+//    }
+//}

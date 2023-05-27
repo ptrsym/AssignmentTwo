@@ -17,15 +17,11 @@ struct ContentView: View {
         NavigationView{
             VStack {
                 List{
-                    ForEach(favouritePlaces.Place) { place in
+                    ForEach(favouritePlaces, id:\.self) { place in
                         NavigationLink(destination: DetailView(place: place)){
                             PlaceRowView(place: place)
                         }
-                    }.onDelete {indexSet in
-                        favouritePlaces.Place.remove(atOffsets: indexSet)
-                        saveData()
-                   
-                }
+                    }.onDelete(perform: delPlace)
                 }
                 
             }
@@ -33,7 +29,7 @@ struct ContentView: View {
         }.navigationTitle("My Favourite Places")
             .navigationBarItems(
                 leading: Button(action:{
-                    favouritePlaces.addPlace()
+                    favouritePlaces.addNewPlace
                     saveData()
                 }) {Text("New Place")}
             ,
