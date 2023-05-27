@@ -29,9 +29,8 @@ struct ContentView: View {
         }.navigationTitle("My Favourite Places")
             .navigationBarItems(
                 leading: Button(action:{
-                    favouritePlaces.addNewPlace
-                    saveData()
-                }) {Text("New Place")}
+                    addNewPlace()
+                }) {Text("Add New Place")}
             ,
                 trailing: EditButton())
     }

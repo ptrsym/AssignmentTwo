@@ -22,13 +22,13 @@ func saveData() {
     }
 }
 
+func addNewPlace() {
+    let context = PersistenceHandler.shared.container.viewContext
+    let newPlace = Place(context: context)
+    saveData()
+}
+
 extension Place {
-    
-    func addNewPlace() {
-        let context = PersistenceHandler.shared.container.viewContext
-        let newPlace = Place(context: context)
-        saveData()
-    }
     
     func addDetail(_ description:String) {
         let context = PersistenceHandler.shared.container.viewContext
